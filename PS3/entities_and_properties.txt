@@ -1,0 +1,85 @@
+/*
+1. 
+ENTITY:
+BOOKS
+
+PROPERTIES
+BookID
+Title
+ISBN
+PublishedDate
+PublisherID
+AuthorID
+EditorID
+GenreID
+RoyaltiesPerAuthor
+
+ENTITY:
+Publishers
+
+PROPERTIES
+PublisherID
+Name
+Country
+NumBooksPublished
+
+
+ENTITY: 
+Author
+
+PROPERTIES:
+GenreID
+NumBooks
+
+ENTITY: 
+Orders
+
+PROPERTIES:
+BookID
+CustomerID
+NumBooksInOrder
+
+
+ENTITY:
+Customers
+
+PROPERTIES
+CustomerID
+Name
+NumOrders
+
+
+ENTITY:
+Editors
+
+PROPERTIES
+EditorID
+NumBooksEdited
+*/
+
+
+/*
+2. PRIMARY KEYS
+BookID
+AuthorID
+PublisherID
+GenreID
+OrderID
+CustomerID
+EditorID
+*/
+
+
+/*
+3.
+TABLE RELATIONSHIPS
+Books, Publisher, 1:1
+Books, Editor, 1:1
+Books, Genre, 1:1
+Books, OrderQueue, 1:?
+
+BookAuthors, Authors, 1:N
+
+OrderQueue, Customers, 1:N
+
+*/
